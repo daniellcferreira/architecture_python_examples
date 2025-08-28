@@ -41,7 +41,7 @@ def loop_cli():
 
         # incremento: formato n+
         if comando.endswith("+") and comando[:-1].isdigit():
-            indice = int(comando[:-1] - 1)  # conversão para indice 0-based
+            indice = indice = int(comando[:-1]) - 1  # conversão para indice 0-based
             controller.registrar_venda(indice)
         else:
             controller.adicionar_atendente(comando)
